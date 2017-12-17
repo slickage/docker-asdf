@@ -17,4 +17,4 @@ asdf:
 	docker build -f Dockerfile -t slickage/asdf .
 
 ruby:
-	docker build -f Dockerfile.ruby -t slickage/ruby .
+	docker build -f ruby.Dockerfile -t slickage/ruby .
