@@ -11,10 +11,6 @@ RUN apk add --no-cache \
     readline-dev \
     zlib-dev
 
-# note: default tz is Pacific/Honolulu
-# run again in application Dockerfile to change default tz
-RUN cp /usr/share/zoneinfo/Pacific/Honolulu /etc/localtime
-
 USER app
 
 RUN asdf plugin-add ruby
