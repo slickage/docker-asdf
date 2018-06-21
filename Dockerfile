@@ -3,7 +3,7 @@ FROM alpine:3.7
 LABEL maintainer="James Wang <jw@slickage.com>"
 
 RUN apk add --update
-RUN apk add --virtual .asdf-deps --no-cache bash curl file git tzdata vim wget
+RUN apk add --virtual .asdf-deps --no-cache bash curl file git patch tzdata vim wget
 
 # note: default tz is Pacific/Honolulu
 # run again in application Dockerfile to change default tz
