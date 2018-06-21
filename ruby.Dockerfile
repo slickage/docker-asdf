@@ -13,8 +13,8 @@ RUN apk add --no-cache \
 
 USER app
 
-ENV ac_cv_func_isnan=yes ac_cv_func_isinf=yes
+# ENV ac_cv_func_isnan=yes ac_cv_func_isinf=yes
 
 RUN asdf plugin-add ruby
-RUN asdf install ruby 2.5.0
-RUN asdf global ruby 2.5.0
+RUN asdf install ruby 2.5.1
+RUN asdf global ruby 2.5.1
