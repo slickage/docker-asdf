@@ -12,10 +12,12 @@ RUN cp /usr/share/zoneinfo/Pacific/Honolulu /etc/localtime
 SHELL ["/bin/bash", "-l", "-c"]
 RUN adduser -s /bin/bash -h /app -D app
 ENV PATH="${PATH}:/app/.asdf/shims:/app/.asdf/bin"
+COPY .profile /app/.profile
+COPY .bashrc /app/.bashrc
+RUN chown app:app /app/.profile
+RUN chown app:app /app/.bashrc
 
 USER app
 WORKDIR /app
 
 RUN git clone --depth 1 --branch v0.4.0 https://github.com/asdf-vm/asdf $HOME/.asdf
-COPY .profile .
-COPY .bashrc .
