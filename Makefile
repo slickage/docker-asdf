@@ -14,7 +14,7 @@ help:
 build: asdf ruby
 
 asdf:
-	docker build -f Dockerfile -t slickage/asdf .
+	docker build --no-cache -f Dockerfile -t slickage/asdf .
 
 ruby:
-	docker build -f ruby.Dockerfile -t slickage/ruby .
+	docker build --no-cache -f ruby.Dockerfile -t slickage/ruby .
