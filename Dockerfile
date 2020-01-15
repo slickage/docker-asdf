@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.11.2
 
 LABEL maintainer="James Wang <jw@slickage.com>"
 
@@ -20,4 +20,4 @@ RUN chown app:app /app/.bashrc
 USER app
 WORKDIR /app
 
-RUN git clone --depth 1 --branch v0.4.0 https://github.com/asdf-vm/asdf $HOME/.asdf
+RUN git clone --depth 1 --branch v0.7.6 https://github.com/asdf-vm/asdf $HOME/.asdf
